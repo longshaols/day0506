@@ -3,8 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="/js/jquery/jquery.form.js"></script>
+    <script src="/js/moment/moment.min.js"></script>
+    <script src="/js/numeral/numeral.min.js"></script>
+    <script src="/js/numeral/chs.min.js"></script>
+    <script src="/js/common/base.js"></script>
+    <script src="/js/common/normal.js"></script>
+    <script>
+        $(function () {
+            reload()
+        })
+        function reload() {
+            var url = location.href.split("=")
+            var goodsDistrict = url[1]
+            $.post("selectAll",{goodsDistrict:goodsDistrict},function (result) {
+                var obj = $.dealJSONObj(result)
+                if (!obj.code){
+                    var temp = "<tr>\n    <td>{0}</td>\n    <td>{1}</td>\n    <td>{2}</td>\n    <td>{3}</td>\n    <td>{4}</td>\n    <td><input type=\'button\' value=\'删除\' onclick=\'delete({0})\'></td>\n</tr>";
+                    var data = ""
+                    $.each(obj.data,function (k,v) {
+                        data += temp.formatStr(v.id,v.goodsname,v.goodsprice,v.goodscount,panduan(v.billstatus))
+                    })
+                    $("#tbody").empty()
+                    $("#tbody").html(data)
+                }
+            })
+        }
+        function panduan(a) {
+            switch (a) {
+                case 0:
+                    return "待处理"
+                case 1:
+                    return "处理中"
+                default:
+                    return "已处理"
+            }
+        }
+    </script>
 </head>
 <body>
-欢迎
+<table border="1">
+    <thead>
+    <tr>
+        <th>商品编号</th>
+        <th>商品名称</th>
+        <th>商品价格</th>
+        <th>库存数量</th>
+        <th>订单状态</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
 </body>
 </html>
