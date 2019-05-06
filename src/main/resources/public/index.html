@@ -20,7 +20,7 @@
             $.post("selectAll",{goodsDistrict:goodsDistrict},function (result) {
                 var obj = $.dealJSONObj(result)
                 if (!obj.code){
-                    var temp = "<tr>\n    <td>{0}</td>\n    <td>{1}</td>\n    <td>{2}</td>\n    <td>{3}</td>\n    <td>{4}</td>\n    <td><input type=\'button\' value=\'删除\' onclick=\'delete({0})\'></td>\n</tr>";
+                    var temp = "<tr>\n    <td>{0}</td>\n    <td>{1}</td>\n    <td>{2}</td>\n    <td>{3}</td>\n    <td>{4}</td>\n    <td><input type=\'button\' value=\'删除\' onclick=\'delete({0})\'></td>\n    <td><input type=\'button\' value=\'修改\' onclick=\'update({0})\'></td>\n</tr>";
                     var data = ""
                     $.each(obj.data,function (k,v) {
                         data += temp.formatStr(v.id,v.goodsname,v.goodsprice,v.goodscount,panduan(v.billstatus))
