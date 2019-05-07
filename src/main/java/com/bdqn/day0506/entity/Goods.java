@@ -36,7 +36,7 @@ public class Goods {
     /**
     * 
     */
-    private Date creationtime;
+    private String creationtime;
 
     public int getId() {
         return id;
@@ -86,11 +86,11 @@ public class Goods {
         this.goodscount = goodscount;
     }
 
-    public Date getCreationtime() {
+    public String getCreationtime() {
         return creationtime;
     }
 
-    public void setCreationtime(Date creationtime) {
+    public void setCreationtime(String creationtime) {
         this.creationtime = creationtime;
     }
 }

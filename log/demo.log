@@ -1,11 +1,31 @@
-2019-05-06 11:29:23,591 INFO (StartupInfoLogger.java:50)- Starting Day0506Application on 王辉 with PID 18112 (D:\mywork\day0506\target\classes started by 王辉老大 in D:\mywork\day0506)
-2019-05-06 11:29:23,640 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
-2019-05-06 11:29:23,641 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
-2019-05-06 11:31:30,815 INFO (StartupInfoLogger.java:50)- Starting Day0506Application on 王辉 with PID 14296 (D:\mywork\day0506\target\classes started by 王辉老大 in D:\mywork\day0506)
-2019-05-06 11:31:30,819 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
-2019-05-06 11:31:30,820 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
-2019-05-06 11:31:36,068 INFO (StartupInfoLogger.java:59)- Started Day0506Application in 5.824 seconds (JVM running for 6.882)
-2019-05-06 11:32:50,081 INFO (StartupInfoLogger.java:50)- Starting Day0506Application on 王辉 with PID 4296 (D:\mywork\day0506\target\classes started by 王辉老大 in D:\mywork\day0506)
-2019-05-06 11:32:50,084 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
-2019-05-06 11:32:50,085 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
-2019-05-06 11:32:53,214 INFO (StartupInfoLogger.java:59)- Started Day0506Application in 3.767 seconds (JVM running for 4.976)
+2019-05-07 09:41:57,108 INFO (StartupInfoLogger.java:50)- Starting Day0506Application on 王辉 with PID 14452 (E:\day0501\day0506\target\classes started by 王辉老大 in E:\day0501\day0506)
+2019-05-07 09:41:57,121 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-07 09:41:57,122 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+2019-05-07 09:42:01,054 INFO (StartupInfoLogger.java:59)- Started Day0506Application in 4.654 seconds (JVM running for 6.559)
+2019-05-07 09:42:39,571 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: select id, goodsName, billStatus, goodsDistrict, goodsPrice, goodsCount, creationTime from goods 
+2019-05-07 09:42:39,596 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2019-05-07 09:42:39,628 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 5
+2019-05-07 09:43:58,127 INFO (StartupInfoLogger.java:50)- Starting Day0506Application on 王辉 with PID 12132 (E:\day0501\day0506\target\classes started by 王辉老大 in E:\day0501\day0506)
+2019-05-07 09:43:58,131 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-07 09:43:58,131 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+2019-05-07 09:44:01,186 INFO (StartupInfoLogger.java:59)- Started Day0506Application in 3.631 seconds (JVM running for 4.703)
+2019-05-07 09:44:25,886 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: select id, goodsName, billStatus, goodsDistrict, goodsPrice, goodsCount, creationTime from goods 
+2019-05-07 09:44:25,915 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2019-05-07 09:44:25,939 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 5
+2019-05-07 11:16:54,979 INFO (StartupInfoLogger.java:50)- Starting Day0506Application on 王辉 with PID 12644 (E:\day0501\day0506\target\classes started by 王辉老大 in E:\day0501\day0506)
+2019-05-07 11:16:54,982 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-07 11:16:54,983 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+2019-05-07 11:16:58,819 INFO (StartupInfoLogger.java:59)- Started Day0506Application in 4.376 seconds (JVM running for 5.581)
+2019-05-07 11:21:24,800 INFO (StartupInfoLogger.java:50)- Starting Day0506Application on 王辉 with PID 13808 (E:\day0501\day0506\target\classes started by 王辉老大 in E:\day0501\day0506)
+2019-05-07 11:21:24,809 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.4.RELEASE, Spring v5.1.6.RELEASE
+2019-05-07 11:21:24,810 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+2019-05-07 11:21:27,895 INFO (StartupInfoLogger.java:59)- Started Day0506Application in 3.815 seconds (JVM running for 5.23)
+2019-05-07 11:21:36,297 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: insert into goods ( goodsName, billStatus, goodsPrice, goodsCount, creationTime ) values ( ?, ?, ?, ?, ? ) 
+2019-05-07 11:21:36,355 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 雪糕(String), 0(Integer), 20.0(Double), 200(Long), 2019-05-06(String)
+2019-05-07 11:21:36,528 DEBUG (BaseJdbcLogger.java:143)- <==    Updates: 1
+2019-05-07 11:22:23,495 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: insert into goods ( goodsName, billStatus, goodsPrice, goodsCount, creationTime ) values ( ?, ?, ?, ?, ? ) 
+2019-05-07 11:22:23,496 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 雪糕(String), 0(Integer), 20.0(Double), 200(Long), 2019-05-06(String)
+2019-05-07 11:22:23,558 DEBUG (BaseJdbcLogger.java:143)- <==    Updates: 1
+2019-05-07 11:22:24,544 DEBUG (BaseJdbcLogger.java:143)- ==>  Preparing: select id, goodsName, billStatus, goodsDistrict, goodsPrice, goodsCount, creationTime from goods 
+2019-05-07 11:22:24,545 DEBUG (BaseJdbcLogger.java:143)- ==> Parameters: 
+2019-05-07 11:22:24,563 DEBUG (BaseJdbcLogger.java:143)- <==      Total: 7

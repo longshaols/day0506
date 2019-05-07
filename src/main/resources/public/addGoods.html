@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加商品</title>
+    <script src="/js/jquery/jquery-1.12.4.min.js"></script>
+    <script src="/js/jquery/jquery.form.js"></script>
+    <script src="/js/moment/moment.min.js"></script>
+    <script src="/js/numeral/numeral.min.js"></script>
+    <script src="/js/numeral/chs.min.js"></script>
+    <script src="/js/common/base.js"></script>
+    <script src="/js/common/normal.js"></script>
+    <script>
+        function addGoods() {
+            $.post("insertOne",$("#ff").serialize(),function (result) {
+                var obj = $.dealJSONObj(result)
+                if (!obj.code) {
+                    alert(obj.msg)
+                    location.href="index.html"
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<form id="ff">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="2">添加商品</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>商品名称：</td>
+            <td>
+                <input type="text" id="goodsname" name="goodsname">
+                <input type="hidden" name="creationtime" value="2019-05-06">
+            </td>
+        </tr>
+        <tr>
+            <td>商品状态：</td>
+            <td>
+                <select name="billstatus" id="billstatus">
+                    <option value="0">待处理</option>
+                    <option value="1">处理中</option>
+                    <option value="2">已处理</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>商品价格：</td>
+            <td>
+                <input type="text" id="goodsprice" name="goodsprice">
+            </td>
+        </tr>
+        <tr>
+            <td>商品数量：</td>
+            <td>
+                <input type="text" id="goodscount" name="goodscount">
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="提交" onclick="addGoods()">
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</form>
+</body>
+</html>
