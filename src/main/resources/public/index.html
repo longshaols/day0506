@@ -20,7 +20,7 @@
             $.post("selectAll",{goodsDistrict:goodsDistrict},function (result) {
                 var obj = $.dealJSONObj(result)
                 if (!obj.code){
-                    var temp = "<tr>\n    <td>{0}</td>\n    <td>{1}</td>\n    <td>{2}</td>\n    <td>{3}</td>\n    <td>{4}</td>\n    <td><input type=\'button\' value=\'删除\' onclick=\'delete({0})\'></td>\n</tr>";
+                    var temp = "<tr>\n    <td>{0}</td>\n    <td>{1}</td>\n    <td>{2}</td>\n    <td>{3}</td>\n    <td>{4}</td>\n    <td><input type=\'button\' value=\'删除\' onclick=\'delThis({0})\'></td>\n</tr>";
                     var data = ""
                     $.each(obj.data,function (k,v) {
                         data += temp.formatStr(v.id,v.goodsname,v.goodsprice,v.goodscount,panduan(v.billstatus))
@@ -43,6 +43,24 @@
         function adv() {
             alert(1)
         }
+
+
+        function delThis(id) {
+            var flag = confirm("你确认删除这条信息么");
+            if (flag){
+                $.post("delOne",{id:id},function (result) {
+                    var obj = $.dealJSONObj(result)
+                    if (!obj.code){
+                        alert(obj.msg)
+                        location.href = "index.html"
+                    }else {
+                        alert(obj.msg)
+                        location.href = "index.html"
+                    }
+                })
+            }
+        }
+
     </script>
 </head>
 <body>
